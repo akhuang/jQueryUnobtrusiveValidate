@@ -16,5 +16,10 @@ namespace MvcApplication6.Controllers
             return View();
         }
 
+        public ActionResult Original()
+        {
+            return View();
+        }
+
     }
 }

@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Original";
+}
+<h2>
+    Original</h2>
+<form name="myForm" id="myForm">
+<fieldset>
+    <legend>My Form</legend>
+    <button id="btnAdd">
+        add</button>
+    <div>
+        First Name:<input data-val="true" data-val-required="A date is required." type="text"
+            id="firstName" name="firstName">
+        <span data-valmsg-replace="false" data-valmsg-for="firstName" class="field-validation-valid">
+            *</span>
+    </div>
+    <br>
+    Last Name:
+    <input type="text" name="lastName">
+</fieldset>
+<input type="submit">
+</form>
+@section scripts
+{
+    <script type="text/javascript">
+        $(function () {
+            $("#btnAdd").click(function () {
+                var $input = '<input type="text" id="email" name="email" required /><span data-valmsg-replace="false" data-valmsg-for="email" class="field-validation-valid">*</span>';
+                $("fieldset").append($input);
+                return false;
+            });
+
+            //            .find("#email").rules('add', {
+            //                required: true
+            //            });
+
+            //                        $.validator.unobtrusive.parse($("#myForm"));
+
+            //            var form = $("#myForm");
+            //            form.removeData('validator');
+            //            form.removeData('unobtrusiveValidation');
+            //            $.validator.unobtrusive.parse(form);
+
+        });
+    </script>
+}
