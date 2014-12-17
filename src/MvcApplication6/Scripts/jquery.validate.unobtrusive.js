@@ -110,7 +110,8 @@
                     invalidHandler: $.proxy(onErrors, form),
                     messages: {},
                     rules: {},
-                    success: $.proxy(onSuccess, form)
+                    success: $.proxy(onSuccess, form),
+                    onfocusout: function (element) { $(element).valid(); }
                 },
                 attachValidation: function () {
                     $form
